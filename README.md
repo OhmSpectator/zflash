@@ -1,3 +1,12 @@
+# The ZFlash Tool
+
+The ZFlash tool it's a project forked from the Raspberry Pi Imager that has
+as its main goal to provide an easy way to choose, fetch and flash EVE-OS
+images to removable devices.
+
+The ZFlash tool is provided to community by Zededa Inc.
+
+
 # Raspberry Pi Imager
 
 Raspberry Pi Imaging Utility
