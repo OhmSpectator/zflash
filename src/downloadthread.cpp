@@ -668,7 +668,7 @@ void DownloadThread::_onWriteError()
                            QSettings::Registry64Format);
         if (registry.value("EnableControlledFolderAccess").toInt() == 1)
         {
-            msg += "<br>"+tr("Controlled Folder Access seems to be enabled. Please add both rpi-imager.exe and fat32format.exe to the list of allowed apps and try again.");
+            msg += "<br>"+tr("Controlled Folder Access seems to be enabled. Please add both zflash.exe and fat32format.exe to the list of allowed apps and try again.");
         }
         _onDownloadError(msg);
     }
