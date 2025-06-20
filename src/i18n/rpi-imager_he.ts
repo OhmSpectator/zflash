@@ -104,8 +104,8 @@
     </message>
     <message>
         <location filename="../downloadthread.cpp" line="671"/>
-        <source>Controlled Folder Access seems to be enabled. Please add both rpi-imager.exe and fat32format.exe to the list of allowed apps and try again.</source>
-        <translation>נראה שגישה מבוקרת לתיקיות פפעילה. נא להוסיף את rpi-imager.exe ואת fat32format.exe לרשימת היישומים המורשים ולנסות שוב.</translation>
+        <source>Controlled Folder Access seems to be enabled. Please add both zflash.exe and fat32format.exe to the list of allowed apps and try again.</source>
+        <translation>נראה שגישה מבוקרת לתיקיות פפעילה. נא להוסיף את zflash.exe ואת fat32format.exe לרשימת היישומים המורשים ולנסות שוב.</translation>
     </message>
     <message>
         <location filename="../downloadthread.cpp" line="678"/>
