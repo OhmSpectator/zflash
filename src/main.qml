@@ -43,7 +43,7 @@ ApplicationWindow {
     minimumWidth: imageWriter.isEmbeddedMode() ? -1 : 680
     minimumHeight: imageWriter.isEmbeddedMode() ? -1 : 420
 
-    title: qsTr("Raspberry Pi Imager v%1").arg(imageWriter.constantVersion())
+    title: qsTr("ZFlash v%1").arg(imageWriter.constantVersion())
     
     Component.onCompleted: {
         // Set initial focus to the anchor
@@ -134,6 +134,8 @@ ApplicationWindow {
 
         Rectangle {
             id: logoContainer
+            color: Style.mainBackgroundColor
+            implicitWidth: window.width
             implicitHeight: window.height/4
 
             Image {
@@ -151,12 +153,9 @@ ApplicationWindow {
                 // image content: align left so all this padding is on the
                 // right.
                 fillMode: Image.PreserveAspectFit
-                horizontalAlignment: Image.AlignLeft
 
-                // Keep the left side of the image 40 pixels from the left
-                // edge
-                anchors.left: logoContainer.left
-                anchors.leftMargin: 40
+                // Centralize the logo
+                anchors.centerIn: parent
 
                 // Equal padding above and below the image
                 anchors.top: logoContainer.top
@@ -246,7 +245,7 @@ ApplicationWindow {
                     Text {
                         id: text1
                         color: Style.subtitleColor
-                        text: qsTr("Operating System")
+                        text: qsTr("EVE-OS")
                         Layout.fillWidth: true
                         Layout.preferredHeight: 17
                         font.pixelSize: 12
@@ -693,7 +692,7 @@ ApplicationWindow {
         yesButton: true
         noButton: true
         title: qsTr("Are you sure you want to quit?")
-        text: qsTr("Raspberry Pi Imager is still busy.<br>Are you sure you want to quit?")
+        text: qsTr("ZFlash is still busy.<br>Are you sure you want to quit?")
         onYes: {
             Qt.quit()
         }
