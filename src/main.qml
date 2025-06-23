@@ -418,13 +418,12 @@ ApplicationWindow {
                             if (!window.imageWriter.readyToWrite()) {
                                 return
                             }
-                            focusAnchor.forceActiveFocus()
-
-                            if (!optionspopup.visible && window.imageWriter.imageSupportsCustomization()) {
-                                usesavedsettingspopup.open()
-                            } else {
-                                confirmwritepopup.askForConfirmation()
-                            }
+                            confirmwritepopup.askForConfirmation()
+                            //if (!optionspopup.visible && window.imageWriter.imageSupportsCustomization()) {
+                            //    usesavedsettingspopup.openPopup()
+                            //} else {
+                            //    confirmwritepopup.askForConfirmation()
+                            //}
                         }
                         
                         Keys.onPressed: (event) => {
