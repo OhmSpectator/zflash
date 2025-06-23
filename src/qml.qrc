@@ -1,19 +1,14 @@
 <RCC>
-
-    <!-- Resources used by C++: -->
     <qresource prefix="/">
         <file>qtquickcontrols2.conf</file>
         <file>countries.txt</file>
         <file>timezones.txt</file>
         <file>keymap-layouts.txt</file>
     </qresource>
-
-    <!-- Resources used by QML: -->
     <qresource prefix="/qt/qml/RpiImager">
         <file>fonts/Roboto-Bold.ttf</file>
         <file>fonts/Roboto-Light.ttf</file>
         <file>fonts/Roboto-Regular.ttf</file>
-
         <file>icons/rpi-imager.ico</file>
         <file>icons/ic_chevron_left_40px.svg</file>
         <file>icons/ic_chevron_right_40px.svg</file>
@@ -37,5 +32,7 @@
         <file>icons/logo_stacked_imager.png</file>
         <file>icons/logo_sxs_imager.png</file>
         <file>icons/cat_digital_signage.png</file>
+        <file>icons/os-image.svg</file>
+        <file>icons/device.svg</file>
     </qresource>
 </RCC>
