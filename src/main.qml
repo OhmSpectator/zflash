@@ -262,12 +262,12 @@ ApplicationWindow {
                             if (!window.imageWriter.readyToWrite()) {
                                 return
                             }
-
-                            if (!optionspopup.visible && window.imageWriter.imageSupportsCustomization()) {
-                                usesavedsettingspopup.openPopup()
-                            } else {
-                                confirmwritepopup.askForConfirmation()
-                            }
+                            confirmwritepopup.askForConfirmation()
+                            //if (!optionspopup.visible && window.imageWriter.imageSupportsCustomization()) {
+                            //    usesavedsettingspopup.openPopup()
+                            //} else {
+                            //    confirmwritepopup.askForConfirmation()
+                            //}
                         }
                     }
                 }
