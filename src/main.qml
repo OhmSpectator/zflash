@@ -192,16 +192,14 @@ ApplicationWindow {
                     Layout.column: 1
                     Layout.fillWidth: true
 
-                    Text {
-                        id: text1
-                        color: Style.subtitleColor
-                        text: qsTr("EVE-OS")
-                        Layout.fillWidth: true
-                        Layout.preferredHeight: 17
-                        font.pixelSize: 12
-                        font.family: Style.fontFamilyBold
-                        font.bold: true
-                        horizontalAlignment: Text.AlignHCenter
+                    Image {
+                        id: imageOs
+                        source: "icons/os-image.svg"
+                        fillMode: Image.PreserveAspectFit
+                        Layout.alignment: Qt.AlignHCenter
+                        Layout.preferredHeight: 50
+                        Layout.maximumHeight: 50
+                        Layout.minimumHeight: 50
                     }
 
                     ImButton {
@@ -241,16 +239,14 @@ ApplicationWindow {
                     Layout.column: 2
                     Layout.fillWidth: true
 
-                    Text {
-                        id: text2
-                        color: Style.subtitleColor
-                        text: qsTr("Storage")
-                        Layout.fillWidth: true
-                        Layout.preferredHeight: 17
-                        font.pixelSize: 12
-                        font.family: Style.fontFamilyBold
-                        font.bold: true
-                        horizontalAlignment: Text.AlignHCenter
+                    Image {
+                        id: imageDev
+                        source: "icons/device.svg"
+                        fillMode: Image.PreserveAspectFit
+                        Layout.alignment: Qt.AlignHCenter
+                        Layout.preferredHeight: 50
+                        Layout.maximumHeight: 50
+                        Layout.minimumHeight: 50
                     }
 
                     ImButton {

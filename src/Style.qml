@@ -10,11 +10,12 @@ import QtQuick 2.15
 Item {
     id: root
 
-    readonly property color mainBackgroundColor: "#25232B"
+    readonly property color mainBackgroundColor: "#25232b"
 
     readonly property color buttonBackgroundColor: "#ff5000"
     readonly property color buttonForegroundColor: "#ffffff"
-    readonly property color buttonFocusedBackgroundColor: "#413f3f"
+    readonly property color buttonFocusedBackgroundColor: "#ff5000"
+    readonly property color buttonDisabledBackgroundColor: "#413f3f"
 
     readonly property color button2BackgroundColor: mainBackgroundColor
     readonly property color button2ForegroundColor: "#ffffff"
