@@ -894,12 +894,12 @@ elseif(APPLE)
     set(EXTRALIBS ${EXTRALIBS} ${CoreFoundation} ${DiskArbitration} ${Security} ${Cocoa} ${IOKit} ${SystemConfiguration} iconv)
     
     # Set application name with proper spacing
-    set(APP_NAME "Raspberry Pi Imager")
+	set(APP_NAME "ZFlash Imager")
     
     # Set all required bundle properties
     set(MACOSX_BUNDLE_BUNDLE_NAME "${APP_NAME}")
     set(MACOSX_BUNDLE_EXECUTABLE_NAME "${PROJECT_NAME}")
-    set(MACOSX_BUNDLE_GUI_IDENTIFIER "org.raspberrypi.imagingutility")
+    set(MACOSX_BUNDLE_GUI_IDENTIFIER "org.zededa.imagingutility")
     set(MACOSX_BUNDLE_BUNDLE_VERSION "${IMAGER_VERSION_STR}")
     set(MACOSX_BUNDLE_SHORT_VERSION_STRING "${IMAGER_VERSION_STR}")
     set(MACOSX_BUNDLE_LONG_VERSION_STRING "${IMAGER_VERSION_STR}")
@@ -1021,9 +1021,9 @@ else()
     endif()
 
     install(TARGETS ${PROJECT_NAME} DESTINATION bin)
-    install(FILES "${CMAKE_CURRENT_LIST_DIR}/../debian/rpi-imager.png" DESTINATION share/icons/hicolor/128x128/apps)
-    install(FILES "${CMAKE_CURRENT_LIST_DIR}/../debian/org.raspberrypi.rpi-imager.desktop" DESTINATION share/applications)
-    install(FILES "${CMAKE_CURRENT_LIST_DIR}/../debian/org.raspberrypi.rpi-imager.metainfo.xml" DESTINATION share/metainfo)
+    install(FILES "${CMAKE_CURRENT_LIST_DIR}/../debian/zflash.png" DESTINATION share/icons/hicolor/128x128/apps)
+    install(FILES "${CMAKE_CURRENT_LIST_DIR}/../debian/org.zededa.zflash.desktop" DESTINATION share/applications)
+    install(FILES "${CMAKE_CURRENT_LIST_DIR}/../debian/org.zededa.zflash.metainfo.xml" DESTINATION share/metainfo)
 endif()
 
 add_dependencies(${PROJECT_NAME} ZLIB::ZLIB)
