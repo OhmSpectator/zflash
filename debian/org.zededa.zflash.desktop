@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.5
+Name=ZFlash Imager
+Comment=Tool for writing EVE-OS images
+Icon=zflash
+Exec=/usr/bin/zflash %F
+Categories=Utility;
+StartupNotify=false
