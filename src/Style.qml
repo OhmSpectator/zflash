@@ -40,7 +40,7 @@ Item {
 
     readonly property color progressBarTextColor: "white"
     readonly property color progressBarVerifyForegroundColor: "#6cc04a"
-    readonly property color progressBarBackgroundColor: "#d15d7d"
+    readonly property color progressBarBackgroundColor: "#ff8f5d"
 
     readonly property color lanbarBackgroundColor: "#ffffe3"
 
