@@ -14,7 +14,7 @@ Button {
     font.capitalization: Font.AllUppercase
     Material.background: activeFocus ? Style.buttonFocusedBackgroundColor : Style.buttonBackgroundColor
     Material.foreground: Style.buttonForegroundColor
-    Material.roundedScale: Material.ExtraSmallScale
+    Material.roundedScale: Material.LargeScale
     Accessible.onPressAction: clicked()
     Keys.onEnterPressed: clicked()
     Keys.onReturnPressed: clicked()
