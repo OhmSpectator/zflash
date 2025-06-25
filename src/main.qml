@@ -59,7 +59,7 @@ ApplicationWindow {
             id: logoContainer
             color: Style.mainBackgroundColor
             implicitWidth: window.width
-            implicitHeight: window.height/4
+            implicitHeight: window.height/6
 
             Image {
                 id: image
@@ -383,6 +383,23 @@ ApplicationWindow {
                         window.onFileSelected(drop.urls[0].toString())
                     }
                 }
+            }
+        }
+
+        Rectangle {
+            id: footerContainer
+            color: Style.mainBackgroundColor
+            implicitWidth: window.width
+            implicitHeight: window.height/6
+
+            Image {
+                id: footerImage
+                source: "icons/zededa-floss.png"
+                height: window.height / 15
+                fillMode: Image.PreserveAspectFit
+                // Centralize the logo
+                anchors.top: parent.top
+                anchors.horizontalCenter: parent.horizontalCenter
             }
         }
     }
