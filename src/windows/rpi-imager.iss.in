@@ -1,10 +1,10 @@
-#define MyAppName "Raspberry Pi Imager"
+#define MyAppName "ZFlash Imager"
 #define MyAppVersion "@IMAGER_VERSION_STR@"
-#define MyAppPublisher "Raspberry Pi Ltd"
-#define RaspberryPiSoftwareURL "https://www.raspberrypi.com/software"
-#define ImagerRepoRootURL "https://github.com/raspberrypi/rpi-imager"
-#define ImagerRepoIssuesURL "https://github.com/raspberrypi/rpi-imager/issues"
-#define MyAppExeName "rpi-imager.exe"
+#define MyAppPublisher "Zededa Inc."
+#define ZFlashSoftwareURL "https://www.github.com/zededa/zflash"
+#define ImagerRepoRootURL "https://github.com/zededa/zflash"
+#define ImagerRepoIssuesURL "https://github.com/zededa/zflash/issues"
+#define MyAppExeName "zflash.exe"
 
 [Setup]
 ; NOTE: This was extracted from an NSIS installation.
@@ -13,11 +13,11 @@ AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 AppVerName={#MyAppName} {#MyAppVersion}
 AppPublisher={#MyAppPublisher}
-AppPublisherURL={#RaspberryPiSoftwareURL}
+AppPublisherURL={#ZFlashSoftwareURL}
 AppSupportURL={#ImagerRepoIssuesURL}
 AppUpdatesURL={#ImagerRepoRootURL}
 DefaultDirName={autopf}\{#MyAppName}
-DefaultGroupName=Raspberry Pi
+DefaultGroupName=Zededa
 AllowNoIcons=yes
 LicenseFile=@CMAKE_BINARY_DIR@\deploy\license.txt
 OutputDir=@CMAKE_BINARY_DIR@\installer
@@ -67,7 +67,7 @@ Root: HKLM; Subkey: "Software\Classes\RPI_IMAGINGUTILITY\shell\open\command"; Va
 ; Main program files
 Source: "@CMAKE_BINARY_DIR@\deploy\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion signonce
 
-Source: "@CMAKE_BINARY_DIR@\deploy\rpi-imager-cli.cmd"; DestDir: "{app}"; Flags: ignoreversion
+Source: "@CMAKE_BINARY_DIR@\deploy\zflash-cli.cmd"; DestDir: "{app}"; Flags: ignoreversion
 Source: "@CMAKE_BINARY_DIR@\deploy\license.txt"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Core DLLs
@@ -84,7 +84,6 @@ Source: "@CMAKE_BINARY_DIR@\deploy\generic\*"; DestDir: "{app}\generic"; Flags: 
 Source: "@CMAKE_BINARY_DIR@\deploy\iconengines\*"; DestDir: "{app}\iconengines"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "@CMAKE_BINARY_DIR@\deploy\imageformats\*"; DestDir: "{app}\imageformats"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "@CMAKE_BINARY_DIR@\deploy\networkinformation\*"; DestDir: "{app}\networkinformation"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "@CMAKE_BINARY_DIR@\deploy\platforminputcontexts\*"; DestDir: "{app}\platforminputcontexts"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "@CMAKE_BINARY_DIR@\deploy\platforms\*"; DestDir: "{app}\platforms"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "@CMAKE_BINARY_DIR@\deploy\styles\*"; DestDir: "{app}\styles"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "@CMAKE_BINARY_DIR@\deploy\tls\*"; DestDir: "{app}\tls"; Flags: ignoreversion recursesubdirs createallsubdirs
@@ -205,14 +204,14 @@ begin
   Result := False;
   
   // Check for NSIS registry entry in HKCU
-  if RegQueryStringValue(HKCU, 'Software\Microsoft\Windows\CurrentVersion\Uninstall\Raspberry Pi Imager',
+  if RegQueryStringValue(HKCU, 'Software\Microsoft\Windows\CurrentVersion\Uninstall\ZFlash Imager',
                           'UninstallString', NSISUninstallString) then
   begin
     Result := True;
   end;
   
   // Also check in HKLM
-  if not Result and RegQueryStringValue(HKLM, 'Software\Microsoft\Windows\CurrentVersion\Uninstall\Raspberry Pi Imager',
+  if not Result and RegQueryStringValue(HKLM, 'Software\Microsoft\Windows\CurrentVersion\Uninstall\ZFlash Imager',
                                        'UninstallString', NSISUninstallString) then
   begin
     Result := True;
@@ -228,7 +227,7 @@ begin
   Result := False;
   
   // First try HKCU
-  if RegQueryStringValue(HKCU, 'Software\Microsoft\Windows\CurrentVersion\Uninstall\Raspberry Pi Imager',
+  if RegQueryStringValue(HKCU, 'Software\Microsoft\Windows\CurrentVersion\Uninstall\ZFlash Imager',
                          'UninstallString', NSISUninstallString) then
   begin
     // NSIS uninstaller is typically followed by /S for silent uninstall
@@ -240,7 +239,7 @@ begin
       Result := (ResultCode = 0);
     end;
   end
-  else if RegQueryStringValue(HKLM, 'Software\Microsoft\Windows\CurrentVersion\Uninstall\Raspberry Pi Imager',
+  else if RegQueryStringValue(HKLM, 'Software\Microsoft\Windows\CurrentVersion\Uninstall\ZFlash Imager',
                               'UninstallString', NSISUninstallString) then
   begin
     // NSIS uninstaller is typically followed by /S for silent uninstall
@@ -267,21 +266,21 @@ begin
   ProcessFound := False;
   NSISInstalled := False;
   
-  // More reliable way to check if rpi-imager.exe is running
+  // More reliable way to check if zflash.exe is running
   try
     // Try to find process with exact name
     ProcessID := 0;
-    ProcessFound := FindProcess('rpi-imager.exe', ProcessID);
+    ProcessFound := FindProcess('zflash.exe', ProcessID);
     
     if ProcessFound and (ProcessID > 0) then
     begin
-      if MsgBox('Raspberry Pi Imager is running and needs to be closed before continuing. Close it now?', mbConfirmation, MB_YESNO) = IDYES then
+      if MsgBox('ZFlash Imager is running and needs to be closed before continuing. Close it now?', mbConfirmation, MB_YESNO) = IDYES then
       begin
         // Try to shut down gracefully first
-        ShellExec('', 'taskkill.exe', '/IM rpi-imager.exe /F', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
+        ShellExec('', 'taskkill.exe', '/IM zflash.exe /F', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
         if ResultCode <> 0 then
         begin
-          MsgBox('Failed to close Raspberry Pi Imager. Please close it manually and try again.', mbError, MB_OK);
+          MsgBox('Failed to close ZFlash Imager. Please close it manually and try again.', mbError, MB_OK);
           ResultFlag := False;
         end;
       end
@@ -301,7 +300,7 @@ begin
     NSISInstalled := IsNSISVersionInstalled;
     if NSISInstalled then
     begin
-      if MsgBox('A previous version of Raspberry Pi Imager was found that needs to be uninstalled first. Uninstall now?', 
+      if MsgBox('A previous version of ZFlash Imager was found that needs to be uninstalled first. Uninstall now?', 
                 mbConfirmation, MB_YESNO) = IDYES then
       begin
         UninstallResult := UninstallNSISVersion;
