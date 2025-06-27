@@ -1,32 +1,32 @@
-Source: rpi-imager
+Source: zflash
 Section: admin
 Priority: optional
-Maintainer: Tom Dewey <tom.dewey@raspberrypi.com>
+Maintainer: Renê de Souza Pinto <rene@renesp.com.br>
 Build-Depends: debhelper (>= 13), cmake, libgnutls28-dev, dh-exec
 Standards-Version: 4.1.2
-Homepage: https://www.raspberrypi.com/software
+Homepage: https://github.com/zededa/zflash
 
-Package: rpi-imager
+Package: zflash
 Build-Profiles: <!amd64 !embedded>
 Architecture: arm64
 Depends: ${shlibs:Depends}, ${misc:Depends}, dosfstools, fdisk, fuse, libfuse2, util-linux (>= 2.37)
 Recommends: udisks2
-Conflicts: rpi-imager-embedded, rpi-imager-amd64
-Description: Raspberry Pi Imaging utility
- A user-friendly tool for creating bootable media for Raspberry Pi Devices.
+Conflicts: zflash-embedded, zflash-amd64
+Description: ZFlash Imaging utility
+ A user-friendly tool for creating bootable media for EVE-OS Devices.
 
-Package: rpi-imager-amd64
+Package: zflash-amd64
 Build-Profiles: <amd64 !embedded>
 Architecture: amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}, dosfstools, fdisk, fuse, libfuse2, util-linux (>= 2.37)
 Recommends: udisks2
-Conflicts: rpi-imager-embedded, rpi-imager
-Description: Raspberry Pi Imaging utility (x86_64)
- A user-friendly tool for creating bootable media for Raspberry Pi Devices.
+Conflicts: zflash-embedded, zflash
+Description: ZFlash Imaging utility (x86_64)
+ A user-friendly tool for creating bootable media for EVE-OS Devices.
  .
  This is the x86_64/amd64 version.
 
-Package: rpi-imager-embedded
+Package: zflash-embedded
 Build-Profiles: <embedded>
 Architecture: arm64
 Depends: ${shlibs:Depends}, ${misc:Depends}, 
@@ -34,15 +34,6 @@ Depends: ${shlibs:Depends}, ${misc:Depends},
          libegl1-mesa, libgles2-mesa, libgbm1, libdrm2,
          libinput10, libudev1, libraspberrypi0 | mesa-utils
 Recommends: udisks2, gpu-mem-256 | raspi-config
-Suggests: rpi-eeprom, firmware-brcm80211
-Conflicts: rpi-imager, rpi-imager-amd64
-Description: Raspberry Pi Imaging utility for embedded systems
- A user-friendly tool for creating bootable media for Raspberry Pi devices,
- optimized for embedded systems.
- .
- This version is specifically designed for Raspberry Pi embedded systems:
-  - Uses EGLFS for direct rendering (no desktop environment required)
-  - Optimized for network-based installation
-  - Includes proper OpenGL ES dependencies for Raspberry Pi
-  - Smaller memory footprint for embedded applications
-  - Supports both framebuffer and DRM/KMS rendering
+Conflicts: zflash, zflash-amd64
+Description: ZFlash Imaging utility
+ A user-friendlytool for creating bootable media for EVE-OS Devices.
