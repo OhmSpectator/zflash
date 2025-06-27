@@ -1,14 +1,14 @@
-Source: rpi-imager
+Source: zflash
 Section: admin
 Priority: optional
-Maintainer: Tom Dewey <tom.dewey@raspberrypi.com>
+Maintainer: Renê de Souza Pinto <rene@renesp.com.br>
 Build-Depends: debhelper (>= 10), cmake, libgnutls28-dev, dh-exec
 Standards-Version: 4.1.2
-Homepage: https://www.raspberrypi.com/software
+Homepage: https://github.com/zededa/zflash
 
-Package: rpi-imager
+Package: zflash
 Architecture: arm64
 Depends: ${shlibs:Depends}, ${misc:Depends}, dosfstools, fdisk, fuse, libfuse2, util-linux (>= 2.38)
 Recommends: udisks2
-Description: Raspberry Pi Imaging utility
- A user-friendly tool for creating bootable media for Raspberry Pi Devices.
+Description: ZFlash Imaging utility
+ A user-friendlytool for creating bootable media for EVE-OS Devices.
