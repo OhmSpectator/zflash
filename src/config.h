@@ -8,7 +8,7 @@
 
 
 /* Repository URL */
-#define OSLIST_URL                        "https://raw.githubusercontent.com/rene/eve-releases/refs/heads/main/eve-os.json"
+#define OSLIST_URL                        "https://raw.githubusercontent.com/zededa/zflash/refs/heads/v0.9.5/eve-releases/eve-os.json"
 
 /* Time synchronization URL (only used on eglfs QPA platform, URL must be HTTP) */
 #define TIME_URL                          "http://downloads.raspberrypi.org/os_list_imagingutility_v4.json?time_synchronization"
