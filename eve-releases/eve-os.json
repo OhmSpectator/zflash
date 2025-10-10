@@ -1,112 +1,112 @@
 {
   "os_list": [
-     {
-      "name": "EVE-OS 14.5.0-lts",
-      "description": "EVE 14.5.0-lts images for all platforms",
-      "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/v0.9.5/eve-releases/imgs/eve.png",
+    {
+      "name": "EVE-OS 14.5.1-lts",
+      "description": "EVE 14.5.1-lts images for all platforms",
+      "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/v0.9.6/eve-releases/imgs/eve.png",
       "random": false,
       "subitems": [
         {
-         "name": "EVE-OS 14.5.0-lts for x86_64",
-         "description": "EVE RAW installer generic image for x86 64 bits devices",
-         "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/v0.9.5/eve-releases/imgs/eve.png",
-         "url": "https://github.com/lf-edge/eve/releases/download/14.5.0-lts/amd64.kvm.generic.installer.raw",
-         "extract_size": 620756992,
-         "extract_sha256": "4d2762862c2f52b8e831c48c5220b916d24011006fae5589f10bb455c81bb502",
-         "image_download_size": 620756992,
-         "release_date": "2025-06-18",
-         "init_format": "systemd",
-         "devices": [
-           "amd64"
-           ]
+          "name": "EVE-OS 14.5.1-lts for x86_64",
+          "description": "EVE RAW installer generic image for x86 64 bits devices",
+          "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/v0.9.6/eve-releases/imgs/eve.png",
+          "url": "https://github.com/lf-edge/eve/releases/download/14.5.1-lts/amd64.kvm.generic.installer.raw",
+          "extract_size": 620756992,
+          "extract_sha256": "0bcaae90fcfb6e0f48b659120b35dddded974618814951ad2352cae9b0f9748e",
+          "image_download_size": 620756992,
+          "release_date": "2025-08-28",
+          "init_format": "systemd",
+          "devices": [
+            "amd64"
+          ]
         },
         {
-         "name": "EVE-OS 14.5.0-lts for arm64",
-         "description": "EVE RAW installer generic image for arm 64 bits devices",
-         "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/v0.9.5/eve-releases/imgs/eve.png",
-         "url": "https://github.com/lf-edge/eve/releases/download/14.5.0-lts/amd64.kvm.generic.installer.raw",
-         "extract_size": 620756992,
-         "extract_sha256": "4d2762862c2f52b8e831c48c5220b916d24011006fae5589f10bb455c81bb502",
-         "image_download_size": 620756992,
-         "release_date": "2025-06-18",
-         "init_format": "systemd",
-         "devices": [
-           "arm64"
-           ]
+          "name": "EVE-OS 14.5.1-lts for arm64",
+          "description": "EVE RAW installer generic image for arm 64 bits devices",
+          "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/v0.9.6/eve-releases/imgs/eve.png",
+          "url": "https://github.com/lf-edge/eve/releases/download/14.5.1-lts/arm64.kvm.generic.installer.raw",
+          "extract_size": 620756992,
+          "extract_sha256": "5acd9bb519071a7b7e160bac79e655c4f3fd6a79d51a96accc1c025edbf91314",
+          "image_download_size": 620756992,
+          "release_date": "2025-08-28",
+          "init_format": "systemd",
+          "devices": [
+            "arm64"
+          ]
         },
         {
-          "name": "EVE-OS 14.5.0-lts for NVIDIA Jetson Platform",
+          "name": "EVE-OS 14.5.1-lts for NVIDIA Jetson Platform",
           "description": "EVE images for NVIDIA Jetson Platform",
-          "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/v0.9.5/eve-releases/imgs/eve-nvidia.png",
+          "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/v0.9.6/eve-releases/imgs/eve-nvidia.png",
           "random": false,
           "subitems": [
             {
-             "name": "EVE-OS 14.5.0-lts - Jetpack 5.1.3",
-             "description": "EVE RAW installer image for Jetson Xavier devices",
-             "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/v0.9.5/eve-releases/imgs/eve-nvidia.png",
-             "url": "https://github.com/lf-edge/eve/releases/download/14.5.0-lts/arm64.kvm.nvidia-jp5.installer.raw",
-             "extract_size": 943718400,
-             "extract_sha256": "385dd91aa3bdca4132d98da3f9a7b944f4850910001d3e72d54ce237544586c5",
-             "image_download_size": 943718400,
-             "release_date": "2025-06-18",
-             "init_format": "systemd",
-             "devices": [
-               "nvidia-jp5"
-               ]
+              "name": "EVE-OS 14.5.1-lts - Jetpack 5",
+              "description": "EVE RAW installer image for Jetson Xavier devices",
+              "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/v0.9.6/eve-releases/imgs/eve-nvidia.png",
+              "url": "https://github.com/lf-edge/eve/releases/download/14.5.1-lts/arm64.kvm.nvidia-jp5.installer.raw",
+              "extract_size": 943718400,
+              "extract_sha256": "d179984b45dc8354d41c7e5891d1d0ed83ab4f33b89e6de50536adc3564165c7",
+              "image_download_size": 943718400,
+              "release_date": "2025-08-28",
+              "init_format": "systemd",
+              "devices": [
+                "nvidia-jp5"
+              ]
             },
             {
-             "name": "EVE-OS 14.5.0-lts - Jetpack 6.0",
-             "description": "EVE RAW installer image for Jetson Orin devices",
-             "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/v0.9.5/eve-releases/imgs/eve-nvidia.png",
-             "url": "https://github.com/lf-edge/eve/releases/download/14.5.0-lts/arm64.kvm.nvidia-jp6.installer.raw",
-             "extract_size": 943718400,
-             "extract_sha256": "ae29c682a881e4ba35884362dbcbdbe806143c6c710c758e6300b9718bd6fa32",
-             "image_download_size": 943718400,
-             "release_date": "2025-06-18",
-             "init_format": "systemd",
-             "devices": [
-               "nvidia-jp6"
-               ]
+              "name": "EVE-OS 14.5.1-lts - Jetpack 6",
+              "description": "EVE RAW installer image for Jetson Orin devices",
+              "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/v0.9.6/eve-releases/imgs/eve-nvidia.png",
+              "url": "https://github.com/lf-edge/eve/releases/download/14.5.1-lts/arm64.kvm.nvidia-jp6.installer.raw",
+              "extract_size": 943718400,
+              "extract_sha256": "98eea3ede4bf5671a23ec7aa3e2c1e1f5f3ce2f1d9578cacc02108caf94d6db4",
+              "image_download_size": 943718400,
+              "release_date": "2025-08-28",
+              "init_format": "systemd",
+              "devices": [
+                "nvidia-jp6"
+              ]
             }
           ]
         }
       ]
-     },
-     {
-      "name": "EVE-OS 13.4.3-rc3",
-      "description": "EVE 13.4.3-rc3 images for all platforms",
-      "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/v0.9.5/eve-releases/imgs/eve.png",
+    },
+    {
+      "name": "EVE-OS 13.4.3-lts",
+      "description": "EVE 13.4.3-lts images for all platforms",
+      "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/v0.9.6/eve-releases/imgs/eve.png",
       "random": false,
       "subitems": [
         {
-         "name": "EVE-OS 13.4.3-rc3 for x86_64",
-         "description": "EVE RAW installer generic image for x86 64 bits devices",
-         "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/v0.9.5/eve-releases/imgs/eve.png",
-         "url": "https://github.com/lf-edge/eve/releases/download/13.4.3-rc3/amd64.kvm.generic.installer.raw",
-         "extract_size": 620756992,
-         "extract_sha256": "99f89598444b1683bf76e6b9a06ddf498a315df2e37d8f62eac56038792c654b",
-         "image_download_size": 620756992,
-         "release_date": "2025-06-25",
-         "init_format": "systemd",
-         "devices": [
-           "amd64"
-           ]
+          "name": "EVE-OS 13.4.3-lts for x86_64",
+          "description": "EVE RAW installer generic image for x86 64 bits devices",
+          "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/v0.9.6/eve-releases/imgs/eve.png",
+          "url": "https://github.com/lf-edge/eve/releases/download/13.4.3-lts/amd64.kvm.generic.installer.raw",
+          "extract_size": 620756992,
+          "extract_sha256": "4a3d13d934341410325fefb976bbe9696de013a972336cf39b79ac21ffffdcfc",
+          "image_download_size": 620756992,
+          "release_date": "2025-07-11",
+          "init_format": "systemd",
+          "devices": [
+            "amd64"
+          ]
         },
         {
-         "name": "EVE-OS 13.4.3-rc3 for arm64",
-         "description": "EVE RAW installer generic image for arm 64 bits devices",
-         "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/v0.9.5/eve-releases/imgs/eve.png",
-         "url": "https://github.com/lf-edge/eve/releases/download/13.4.3-rc3/arm64.kvm.generic.installer.raw",
-         "extract_size": 620756992,
-         "extract_sha256": "0edd0e53b8b0bce9631898d22be93e039332bd259fc99185d3a6aa0cb6ffca8a",
-         "image_download_size": 620756992,
-         "release_date": "2025-06-25",
-         "init_format": "systemd",
-         "devices": [
-           "arm64"
-           ]
+          "name": "EVE-OS 13.4.3-lts for arm64",
+          "description": "EVE RAW installer generic image for arm 64 bits devices",
+          "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/v0.9.6/eve-releases/imgs/eve.png",
+          "url": "https://github.com/lf-edge/eve/releases/download/13.4.3-lts/arm64.kvm.generic.installer.raw",
+          "extract_size": 620756992,
+          "extract_sha256": "fec6533ee11cbe24aec2277d5dd11b5bd6fbf67f5a693efae248172cd9517675",
+          "image_download_size": 620756992,
+          "release_date": "2025-07-11",
+          "init_format": "systemd",
+          "devices": [
+            "arm64"
+          ]
         }
       ]
-     }
+    }
   ]
 }
