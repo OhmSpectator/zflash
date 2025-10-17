@@ -658,7 +658,7 @@ Example: ssh-rsa AAAAB3NzaC1yc2E... user@hostname</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Select a custom .img from your computer</source>
+        <source>Select a custom image from your computer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

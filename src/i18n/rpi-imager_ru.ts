@@ -660,8 +660,8 @@ Example: ssh-rsa AAAAB3NzaC1yc2E... user@hostname</source>
         <translation>Использовать настраиваемый образ</translation>
     </message>
     <message>
-        <source>Select a custom .img from your computer</source>
-        <translation>Выбрать настраиваемый файл .img на компьютере</translation>
+        <source>Select a custom image from your computer</source>
+        <translation>Выбрать настраиваемый файл образа на компьютере</translation>
     </message>
     <message>
         <source>SKIP CACHE VERIFICATION</source>

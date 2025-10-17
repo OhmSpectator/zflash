@@ -658,8 +658,8 @@ Example: ssh-rsa AAAAB3NzaC1yc2E... user@hostname</source>
         <translation>Uporabi drugo</translation>
     </message>
     <message>
-        <source>Select a custom .img from your computer</source>
-        <translation>Izberite drug .img iz vašega računalnika</translation>
+        <source>Select a custom image from your computer</source>
+        <translation>Izberite drugo sliko diska iz vašega računalnika</translation>
     </message>
     <message>
         <source>SKIP CACHE VERIFICATION</source>

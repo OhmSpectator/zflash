@@ -658,8 +658,8 @@ Example: ssh-rsa AAAAB3NzaC1yc2E... user@hostname</source>
         <translation>사용자 정의 사용</translation>
     </message>
     <message>
-        <source>Select a custom .img from your computer</source>
-        <translation>컴퓨터에서 사용자 지정 .img를 선택합니다.</translation>
+        <source>Select a custom image from your computer</source>
+        <translation>컴퓨터에서 사용자 지정 이미지를 선택합니다.</translation>
     </message>
     <message>
         <source>SKIP CACHE VERIFICATION</source>

@@ -659,8 +659,8 @@ Example: ssh-rsa AAAAB3NzaC1yc2E... user@hostname</source>
         <translation>Özel imaj kullan</translation>
     </message>
     <message>
-        <source>Select a custom .img from your computer</source>
-        <translation>Bilgisayarınızdan özel bir .img seçin</translation>
+        <source>Select a custom image from your computer</source>
+        <translation>Bilgisayarınızdan özel bir imaj seçin</translation>
     </message>
     <message>
         <source>SKIP CACHE VERIFICATION</source>

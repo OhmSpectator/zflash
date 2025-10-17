@@ -660,8 +660,8 @@ Exemple&#xa0;: ssh-rsa AAAAB3NzaC1yc2E... user@hostname</translation>
         <translation>Utiliser image personnalisée</translation>
     </message>
     <message>
-        <source>Select a custom .img from your computer</source>
-        <translation>Sélectionner une image disque personnalisée (.img) sur votre ordinateur</translation>
+        <source>Select a custom image from your computer</source>
+        <translation>Sélectionner une image disque personnalisée sur votre ordinateur</translation>
     </message>
     <message>
         <source>SKIP CACHE VERIFICATION</source>

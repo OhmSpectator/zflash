@@ -658,8 +658,8 @@ Example: ssh-rsa AAAAB3NzaC1yc2E... user@hostname</source>
         <translation>Власний образ</translation>
     </message>
     <message>
-        <source>Select a custom .img from your computer</source>
-        <translation>Обрати власний .img з вашого комп&apos;ютера</translation>
+        <source>Select a custom image from your computer</source>
+        <translation>Обрати власний образ з вашого комп&apos;ютера</translation>
     </message>
     <message>
         <source>SKIP CACHE VERIFICATION</source>

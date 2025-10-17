@@ -658,8 +658,8 @@ Example: ssh-rsa AAAAB3NzaC1yc2E... user@hostname</source>
         <translation>使用自訂映像檔</translation>
     </message>
     <message>
-        <source>Select a custom .img from your computer</source>
-        <translation>從您的電腦選擇一個自訂的 .img 檔案</translation>
+        <source>Select a custom image from your computer</source>
+        <translation>從您的電腦選擇一個自訂的映像檔</translation>
     </message>
     <message>
         <source>SKIP CACHE VERIFICATION</source>
