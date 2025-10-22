@@ -131,8 +131,8 @@
         <translation>Похоже, загрузка повреждена. Хэш SHA256 не совпадает.&lt;br&gt;Ожидается: %1&lt;br&gt;Фактически: %2&lt;br&gt;Проверьте сетевое подключение и повторите попытку.</translation>
     </message>
     <message>
-        <source>Controlled Folder Access seems to be enabled. Please add rpi-imager.exe to the list of allowed apps and try again.</source>
-        <translation>Похоже, включён контролируемый доступ к папкам. Добавьте rpi-imager.exe в список разрешённых приложений и повторите попытку.</translation>
+        <source>Controlled Folder Access seems to be enabled. Please add zflash.exe to the list of allowed apps and try again.</source>
+        <translation>Похоже, включён контролируемый доступ к папкам. Добавьте zflash.exe в список разрешённых приложений и повторите попытку.</translation>
     </message>
 </context>
 <context>

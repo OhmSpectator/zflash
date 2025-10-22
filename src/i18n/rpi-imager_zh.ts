@@ -131,7 +131,7 @@
         <translation>下载内容似乎已损坏。SHA256 哈希值不匹配。&lt;br&gt;预期值：%1&lt;br&gt;实际值：%2&lt;br&gt;请检查您的网络连接，然后重试。</translation>
     </message>
     <message>
-        <source>Controlled Folder Access seems to be enabled. Please add rpi-imager.exe to the list of allowed apps and try again.</source>
+        <source>Controlled Folder Access seems to be enabled. Please add zflash.exe to the list of allowed apps and try again.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
