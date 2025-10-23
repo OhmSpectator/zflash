@@ -29,7 +29,7 @@ ZFlash is available for **Windows**, **macOS**(both Intel and Apple Silicon), an
 1.  **Choose an Operating System**:
     * Click on **CHOOSE OS**.
     * You can select from the list of available EVE-OS LTS images.
-    * Alternatively, you can choose 'Use custom' to select a custom image file from your computer. ZFlash supports common disk image formats (e.g., `.raw`, `.img`, `.wic`) and compressed archives (e.g., `.zip`, `.gz`, `.xz`, `.zst`).
+    * Alternatively, you can choose 'Use custom' to select a custom image file from your computer. ZFlash supports common disk image formats (e.g., `.raw`, `.img`, `.iso`, `.wic`) and compressed archives (e.g., `.zip`, `.gz`, `.xz`, `.zst`).
 
 2.  **Choose Storage**:
     * Click on **CHOOSE STORAGE**.
