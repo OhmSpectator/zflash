@@ -140,11 +140,10 @@ ApplicationWindow {
 
             Image {
                 id: image
-                source: "icons/logo_sxs_imager.png"
+                source: "icons/logo_sxs_imager.svg"
 
                 // Specify the maximum size of the image
-                width: window.width * 0.45
-                height: window.height / 3
+                height: window.height / 8
 
                 // Within the image's specified size rectangle, resize the
                 // image to fit within the rectangle while keeping its aspect
@@ -158,10 +157,10 @@ ApplicationWindow {
                 anchors.centerIn: parent
 
                 // Equal padding above and below the image
-                anchors.top: logoContainer.top
-                anchors.bottom: logoContainer.bottom
-                anchors.topMargin: window.height / 25
-                anchors.bottomMargin: window.height / 25
+                //anchors.top: logoContainer.top
+                //anchors.bottom: logoContainer.bottom
+                //anchors.topMargin: window.height / 25
+                //anchors.bottomMargin: window.height / 25
             }
         }
 

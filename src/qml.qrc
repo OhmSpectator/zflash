@@ -30,10 +30,10 @@
         <file>icons/cat_language_specific_operating_systems.png</file>
         <file>icons/cat_3d_printing.png</file>
         <file>icons/logo_stacked_imager.png</file>
-        <file>icons/logo_sxs_imager.png</file>
         <file>icons/cat_digital_signage.png</file>
         <file>icons/os-image.svg</file>
         <file>icons/device.svg</file>
         <file>icons/zededa-floss.png</file>
+        <file>icons/logo_sxs_imager.svg</file>
     </qresource>
 </RCC>
