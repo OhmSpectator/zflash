@@ -658,8 +658,8 @@ Example: ssh-rsa AAAAB3NzaC1yc2E... user@hostname</source>
         <translation>কাস্টম ইমেজ ব্যবহার করুন</translation>
     </message>
     <message>
-        <source>Select a custom .img from your computer</source>
-        <translation>আপনার কম্পিউটার থেকে একটি কাস্টম .img নির্বাচন করুন</translation>
+        <source>Select a custom image from your computer</source>
+        <translation>আপনার কম্পিউটার থেকে একটি কাস্টম ছবি নির্বাচন করুন।</translation>
     </message>
     <message>
         <source>SKIP CACHE VERIFICATION</source>

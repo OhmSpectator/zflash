@@ -658,8 +658,8 @@ Example: ssh-rsa AAAAB3NzaC1yc2E... user@hostname</source>
         <translation>Úsáid saincheaptha</translation>
     </message>
     <message>
-        <source>Select a custom .img from your computer</source>
-        <translation>Roghnaigh .img saincheaptha ó do ríomhaire</translation>
+        <source>Select a custom image from your computer</source>
+        <translation>Roghnaigh íomhá saincheaptha ó do ríomhaire.</translation>
     </message>
     <message>
         <source>SKIP CACHE VERIFICATION</source>
