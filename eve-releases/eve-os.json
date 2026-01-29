@@ -107,6 +107,20 @@
           ]
         },
         {
+          "name": "EVE-OS 16.0.0-lts (eve-k) for x86_64",
+          "description": "EVE-OS (eve-k) ISO installer generic image for x86 64-bit devices",
+          "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/zflash/eve-releases/imgs/eve.png",
+          "url": "https://github.com/lf-edge/eve/releases/download/16.0.0-lts/amd64.k.generic.installer.iso",
+          "extract_size": 668534784,
+          "extract_sha256": "ec5208550b223118a5651046d755c893e75d5e16b9b63e26501baaa577286adc",
+          "image_download_size": 668534784,
+          "release_date": "2026-01-07",
+          "init_format": "systemd",
+          "devices": [
+            "amd64"
+          ]
+        },
+        {
           "name": "EVE-OS 16.0.0-lts for NVIDIA Jetson Platform",
           "description": "EVE images for NVIDIA Jetson Platform",
           "icon": "https://raw.githubusercontent.com/zededa/zflash/refs/heads/zflash/eve-releases/imgs/eve-nvidia.png",
