@@ -26,16 +26,18 @@ ZFlash is available for **Windows**, **macOS**(both Intel and Apple Silicon), an
 
 ## How to Use
 
-1.  **Choose an Operating System**:
+1.  Follow the [installation instructions](https://help.zededa.com/hc/en-us/articles/27615247439899-Flash-an-EVE-OS-installer-or-live-image#h_01K8KCBYARPAT0TERHWC49XMY7) for your operating system.
+
+2.  **Choose an Operating System**:
     * Click on **CHOOSE OS**.
     * You can select from the list of available EVE-OS LTS images.
     * Alternatively, you can choose 'Use custom' to select a custom image file from your computer. ZFlash supports common disk image formats (e.g., `.raw`, `.img`, `.iso`, `.wic`) and compressed archives (e.g., `.zip`, `.gz`, `.xz`, `.zst`).
 
-2.  **Choose Storage**:
+3.  **Choose Storage**:
     * Click on **CHOOSE STORAGE**.
     * Select the USB drive or SD card you want to flash the image to.
 
-3.  **Write the Image**:
+4.  **Write the Image**:
     * Click on **NEXT** to start the flashing process.
     * ZFlash will handle the download (if you selected a hosted EVE-OS image), verification, and flashing.
 
