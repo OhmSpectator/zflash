@@ -413,7 +413,11 @@ ApplicationWindow {
                             if (!window.imageWriter.readyToWrite()) {
                                 return
                             }
-                            confirmwritepopup.askForConfirmation()
+                            if (window.imageWriter.isEveImage()) {
+                                eveHvPopup.openWithCheck()
+                            } else {
+                                confirmwritepopup.askForConfirmation()
+                            }
                             //if (!optionspopup.visible && window.imageWriter.imageSupportsCustomization()) {
                             //    usesavedsettingspopup.openPopup()
                             //} else {
@@ -692,6 +696,80 @@ ApplicationWindow {
 
         onOpened: {
             forceActiveFocus()
+        }
+    }
+
+    /* EVE-OS hypervisor type selection popup */
+    ImPopup {
+        id: eveHvPopup
+        title: qsTr("EVE-OS Hypervisor")
+        height: 340
+
+        property var supportedHvTypes: []
+
+        function openWithCheck() {
+            supportedHvTypes = window.imageWriter.getEveHvSupported()
+            open()
+        }
+
+        Text {
+            text: qsTr("This is a universal EVE-OS image that supports multiple hypervisors.\n\nPre-select a hypervisor now, or choose at boot time from the GRUB menu.")
+            font.pointSize: 11
+            wrapMode: Text.Wrap
+            font.family: Style.fontFamily
+            Layout.fillWidth: true
+            Layout.leftMargin: 15
+            Layout.rightMargin: 15
+            Layout.topMargin: 10
+            horizontalAlignment: Text.AlignHCenter
+        }
+
+        RowLayout {
+            Layout.alignment: Qt.AlignCenter
+            spacing: 20
+
+            ImButtonRed {
+                text: qsTr("KVM")
+                enabled: eveHvPopup.supportedHvTypes.indexOf("kvm") >= 0
+                opacity: enabled ? 1.0 : 0.4
+                onClicked: {
+                    eveHvPopup.close()
+                    window.imageWriter.setEveHvType("kvm")
+                    confirmwritepopup.askForConfirmation()
+                }
+            }
+
+            ImButtonRed {
+                text: qsTr("Kubevirt")
+                enabled: eveHvPopup.supportedHvTypes.indexOf("k") >= 0
+                opacity: enabled ? 1.0 : 0.4
+                onClicked: {
+                    eveHvPopup.close()
+                    window.imageWriter.setEveHvType("k")
+                    confirmwritepopup.askForConfirmation()
+                }
+            }
+
+            ImButtonRed {
+                text: qsTr("Xen")
+                enabled: eveHvPopup.supportedHvTypes.indexOf("xen") >= 0
+                opacity: enabled ? 1.0 : 0.4
+                onClicked: {
+                    eveHvPopup.close()
+                    window.imageWriter.setEveHvType("xen")
+                    confirmwritepopup.askForConfirmation()
+                }
+            }
+        }
+
+        ImButtonRed {
+            text: qsTr("Skip — choose at boot time (GRUB menu)")
+            Layout.alignment: Qt.AlignCenter
+            Layout.bottomMargin: 10
+            onClicked: {
+                eveHvPopup.close()
+                confirmwritepopup.askForConfirmation()
+            }
         }
     }
 

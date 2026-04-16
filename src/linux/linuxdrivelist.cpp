@@ -131,6 +131,11 @@ namespace Drivelist
                 if (dp.empty())
                     dp.append(QObject::tr("Internal SD card reader"));
             }
+            if (name.startsWith("/dev/loop"))
+            {
+                dp.removeAll("");
+                dp.prepend(name);
+            }
 
             QString mp = bdev["mountpoint"].toString();
             if (!mp.isEmpty())
