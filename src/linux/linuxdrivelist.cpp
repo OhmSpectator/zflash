@@ -48,14 +48,16 @@ namespace Drivelist
         std::vector<DeviceDescriptor> deviceList;
 
         QProcess p;
-        QStringList args = { 
+        QStringList args = {
             "--bytes",
             "--json",
             "--paths",
             "--tree",
-            "--output", "kname,type,subsystems,ro,rm,hotplug,size,phy-sec,log-sec,label,vendor,model,mountpoint",
-            "--exclude", "7"
+            "--output", "kname,type,subsystems,ro,rm,hotplug,size,phy-sec,log-sec,label,vendor,model,mountpoint"
         };
+        // Major 7 = loop devices. Exclude them unless ZFLASH_SHOW_LOOP is set.
+        if (!qEnvironmentVariableIsSet("ZFLASH_SHOW_LOOP"))
+            args << "--exclude" << "7";
         p.start("lsblk", args);
         p.waitForFinished(2000);
         QByteArray output = p.readAll();
@@ -74,7 +76,11 @@ namespace Drivelist
             QJsonObject bdev = i.toObject();
             QString name = bdev["kname"].toString();
             QString subsystems = bdev["subsystems"].toString();
-            if (name.startsWith("/dev/loop") || name.startsWith("/dev/sr") || name.startsWith("/dev/ram") || name.startsWith("/dev/zram") || name.isEmpty())
+            if (name.startsWith("/dev/sr") || name.startsWith("/dev/ram") || name.startsWith("/dev/zram") || name.isEmpty())
+                continue;
+            // Skip loop devices by default. Set ZFLASH_SHOW_LOOP=1 for testing
+            // with loop-mounted disk images (e.g. installer-split.raw testing).
+            if (name.startsWith("/dev/loop") && !qEnvironmentVariableIsSet("ZFLASH_SHOW_LOOP"))
                 continue;
 
             d.busType    = bdev["busType"].toString().toStdString();
